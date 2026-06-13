@@ -76,7 +76,9 @@ fantube/
         │   ├── index.js        Cron schedule
         │   └── snapshotJobs.js Hourly / daily snapshot aggregation
         └── utils/
-            └── helpers.js      generateHandle
+        │   └── helpers.js      generateHandle
+        │
+        └── uploads/
 ```
 
 ---
