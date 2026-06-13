@@ -2,4 +2,5 @@
 *.jpg
 *.png
 *.jpeg
-.devcontainer/devcontainer.json
+.gitignore
+
