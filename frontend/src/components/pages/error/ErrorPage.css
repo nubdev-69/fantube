@@ -1,0 +1,24 @@
+.error-page-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 60vh;
+    gap: 24px;
+}
+
+.svg-container {
+    width: 200px;
+    height: 200px;
+}
+
+.svg-container svg {
+    width: 100%;
+    height: 100%;
+}
+
+.error-text {
+    font-size: 16px;
+    color: #606060;
+    font-weight: 500;
+}

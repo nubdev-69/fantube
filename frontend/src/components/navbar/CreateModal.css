@@ -1,0 +1,224 @@
+.create-modal-backdrop {
+    position: fixed;
+    top: 0; /* Cover entire screen including navbar */
+    left: 0; /* Cover entire screen including sidebar */
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1500; /* Above navbar and sidebar */
+}
+
+.create-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 800px;
+    max-height: 90vh;
+    overflow-y: auto;
+    z-index: 1501; /* Above backdrop */
+}
+
+.create-modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 24px;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.create-modal-header h2 {
+    font-size: 20px;
+    font-weight: 500;
+    margin: 0;
+}
+
+.create-modal-close {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.create-modal-close:hover {
+    background-color: #f2f2f2;
+}
+
+/* Upload Area */
+.create-upload-area {
+    padding: 60px 24px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+}
+
+.upload-icon {
+    font-size: 80px;
+    margin-bottom: 16px;
+}
+
+.create-upload-area h3 {
+    font-size: 18px;
+    font-weight: 400;
+    margin: 0;
+    color: #0f0f0f;
+}
+
+.create-upload-area p {
+    font-size: 14px;
+    color: #606060;
+    margin: 0;
+}
+
+.upload-select-btn {
+    margin-top: 24px;
+    padding: 10px 24px;
+    background-color: #065fd4;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.upload-select-btn:hover {
+    background-color: #0553c2;
+}
+
+/* Details Form */
+.create-details-form {
+    padding: 24px;
+}
+
+.upload-preview {
+    margin-bottom: 24px;
+    padding: 16px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+}
+
+.preview-video {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.preview-video span {
+    font-size: 32px;
+}
+
+.preview-video p {
+    font-size: 14px;
+    color: #0f0f0f;
+    margin: 0;
+    word-break: break-word;
+}
+
+.video-details-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-group label {
+    font-size: 14px;
+    font-weight: 500;
+    color: #0f0f0f;
+}
+
+.form-group input[type="text"],
+.form-group textarea,
+.form-group select {
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    font-family: inherit;
+    transition: border-color 0.2s;
+}
+
+.form-group input[type="text"]:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: #065fd4;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    margin-top: 24px;
+    padding-top: 24px;
+    border-top: 1px solid #e5e5e5;
+}
+
+.btn-cancel,
+.btn-upload {
+    padding: 10px 24px;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.btn-cancel {
+    background-color: #f2f2f2;
+    color: #0f0f0f;
+}
+
+.btn-cancel:hover {
+    background-color: #e5e5e5;
+}
+
+.btn-upload {
+    background-color: #065fd4;
+    color: white;
+}
+
+.btn-upload:hover {
+    background-color: #0553c2;
+}
+
+.create-modal::-webkit-scrollbar {
+    width: 8px;
+}
+
+.create-modal::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.create-modal::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 4px;
+}
+
+.create-modal::-webkit-scrollbar-thumb:hover {
+    background: #aaa;
+}

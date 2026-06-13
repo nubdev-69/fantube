@@ -1,0 +1,246 @@
+.cs-page {
+    padding: 16px 0;
+}
+
+/* Search bar */
+.cs-search-bar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 16px;
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 24px;
+    margin-bottom: 20px;
+    transition: border-color 0.15s, box-shadow 0.15s;
+}
+.cs-search-bar:focus-within {
+    border-color: #065fd4;
+    box-shadow: 0 0 0 2px rgba(6,95,212,0.12);
+}
+
+.cs-input {
+    flex: 1;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+    color: #0f0f0f;
+    background: transparent;
+}
+.cs-input::placeholder { color: #909090; }
+
+.cs-clear {
+    background: none;
+    border: none;
+    color: #606060;
+    cursor: pointer;
+    font-size: 14px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    transition: color 0.15s;
+}
+.cs-clear:hover { color: #0f0f0f; }
+
+/* States */
+.cs-loading {
+    text-align: center;
+    color: #606060;
+    font-size: 14px;
+    padding: 40px 0;
+}
+
+.cs-result-count {
+    font-size: 13px;
+    color: #606060;
+    margin: 0 0 16px;
+}
+
+.cs-empty {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 60px 0;
+    color: #909090;
+    font-size: 14px;
+    text-align: center;
+}
+
+/* Section */
+.cs-section { margin-bottom: 32px; }
+
+.cs-section-title {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #0f0f0f;
+    margin: 0 0 14px;
+}
+
+.cs-section-count {
+    background: #f2f2f2;
+    color: #606060;
+    font-size: 12px;
+    font-weight: 500;
+    padding: 2px 8px;
+    border-radius: 10px;
+}
+
+/* Video rows */
+.cs-video-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.cs-video-row {
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+    padding: 8px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.15s;
+}
+.cs-video-row:hover { background: #f9f9f9; }
+
+.cs-video-thumb {
+    position: relative;
+    width: 160px;
+    flex-shrink: 0;
+    aspect-ratio: 16/9;
+    border-radius: 6px;
+    overflow: hidden;
+    background: #000;
+}
+.cs-video-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.cs-duration {
+    position: absolute;
+    bottom: 4px;
+    right: 4px;
+    background: rgba(0,0,0,0.8);
+    color: #fff;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 2px 5px;
+    border-radius: 4px;
+}
+
+.cs-video-info { flex: 1; min-width: 0; }
+
+.cs-video-title {
+    font-size: 14px;
+    font-weight: 500;
+    color: #0f0f0f;
+    margin: 0 0 5px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.cs-video-meta {
+    font-size: 12px;
+    color: #606060;
+    margin: 0 0 5px;
+}
+
+.cs-visibility {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 500;
+    padding: 2px 8px;
+    border-radius: 10px;
+}
+.cs-vis-private  { background: #fce8e6; color: #c5221f; }
+.cs-vis-unlisted { background: #fff8e1; color: #b06000; }
+
+/* Playlist grid */
+.cs-playlist-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 16px;
+}
+
+.cs-playlist-card {
+    cursor: pointer;
+    border-radius: 10px;
+    overflow: hidden;
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    transition: transform 0.15s, box-shadow 0.15s;
+}
+.cs-playlist-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.cs-playlist-thumb {
+    position: relative;
+    aspect-ratio: 16/9;
+    background: #f2f2f2;
+    overflow: hidden;
+}
+.cs-playlist-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.cs-playlist-thumb-empty {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cs-playlist-count {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background: rgba(0,0,0,0.75);
+    color: #fff;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 4px 8px;
+}
+
+.cs-playlist-private {
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    font-size: 14px;
+}
+
+.cs-playlist-info { padding: 10px; }
+
+.cs-playlist-name {
+    font-size: 13px;
+    font-weight: 600;
+    color: #0f0f0f;
+    margin: 0 0 4px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.cs-playlist-desc {
+    font-size: 12px;
+    color: #606060;
+    margin: 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}

@@ -1,0 +1,243 @@
+{
+  "info": {
+    "name": "YouTube Clone API",
+    "description": "Complete API collection for YouTube Clone backend",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "auth": {
+    "type": "bearer",
+    "bearer": [
+      {
+        "key": "token",
+        "value": "{{auth_token}}",
+        "type": "string"
+      }
+    ]
+  },
+  "variable": [
+    {
+      "key": "base_url",
+      "value": "http://localhost:5000/api",
+      "type": "string"
+    },
+    {
+      "key": "auth_token",
+      "value": "",
+      "type": "string"
+    }
+  ],
+  "item": [
+    {
+      "name": "Authentication",
+      "item": [
+        {
+          "name": "Register User",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"John Doe\",\n  \"email\": \"john@example.com\",\n  \"password\": \"password123\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/auth/register",
+              "host": ["{{base_url}}"],
+              "path": ["auth", "register"]
+            }
+          }
+        },
+        {
+          "name": "Login",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "if (pm.response.code === 200) {",
+                  "    const response = pm.response.json();",
+                  "    pm.collectionVariables.set('auth_token', response.token);",
+                  "}"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"email\": \"john@example.com\",\n  \"password\": \"password123\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/auth/login",
+              "host": ["{{base_url}}"],
+              "path": ["auth", "login"]
+            }
+          }
+        },
+        {
+          "name": "Get Profile",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/auth/profile",
+              "host": ["{{base_url}}"],
+              "path": ["auth", "profile"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Channels",
+      "item": [
+        {
+          "name": "Create Channel",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"channelId\": \"my-channel\",\n  \"description\": \"My awesome channel\",\n  \"banner\": \"https://example.com/banner.jpg\",\n  \"links\": [\"https://twitter.com/myhandle\"]\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/channels",
+              "host": ["{{base_url}}"],
+              "path": ["channels"]
+            }
+          }
+        },
+        {
+          "name": "Get My Channel",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/channels/me",
+              "host": ["{{base_url}}"],
+              "path": ["channels", "me"]
+            }
+          }
+        },
+        {
+          "name": "Subscribe to Channel",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/channels/1/subscribe",
+              "host": ["{{base_url}}"],
+              "path": ["channels", "1", "subscribe"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Videos",
+      "item": [
+        {
+          "name": "Get All Videos",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/videos?page=1&limit=20",
+              "host": ["{{base_url}}"],
+              "path": ["videos"],
+              "query": [
+                {
+                  "key": "page",
+                  "value": "1"
+                },
+                {
+                  "key": "limit",
+                  "value": "20"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "Create Video",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"title\": \"My First Video\",\n  \"thumbnail\": \"https://example.com/thumb.jpg\",\n  \"description\": \"This is my first video\",\n  \"videoUrl\": \"https://example.com/video.mp4\",\n  \"duration\": 120,\n  \"channelId\": 1,\n  \"visibility\": \"public\",\n  \"tags\": [\"tutorial\", \"beginner\"],\n  \"category\": \"Education\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/videos",
+              "host": ["{{base_url}}"],
+              "path": ["videos"]
+            }
+          }
+        },
+        {
+          "name": "Search Videos",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/videos/search?q=tutorial",
+              "host": ["{{base_url}}"],
+              "path": ["videos", "search"],
+              "query": [
+                {
+                  "key": "q",
+                  "value": "tutorial"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "Get Trending Videos",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/videos/trending",
+              "host": ["{{base_url}}"],
+              "path": ["videos", "trending"]
+            }
+          }
+        },
+        {
+          "name": "Like Video",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/videos/1/like",
+              "host": ["{{base_url}}"],
+              "path": ["videos", "1", "like"]
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

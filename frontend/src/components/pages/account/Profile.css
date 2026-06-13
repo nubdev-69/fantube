@@ -1,0 +1,307 @@
+/* User.css */
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap');
+
+.profile-page {
+    min-height: 85vh;
+    background: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* padding: 40px 20px; */
+    font-family: 'DM Sans', sans-serif;
+}
+
+.profile-card {
+    width: 100%;
+    max-width: 520px;
+    background: #ececec;
+    border: 1px solid #222;
+    border-radius: 20px;
+    overflow: hidden;
+    animation: fadeUp 0.4s ease;
+}
+
+@keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Banner */
+.profile-banner {
+    height: 120px;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.profile-banner-noise {
+    position: absolute;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.08'/%3E%3C/svg%3E");
+    opacity: 0.4;
+}
+
+/* Avatar */
+.profile-avatar-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: -52px;
+    position: relative;
+    z-index: 1;
+}
+
+.profile-avatar-ring {
+    width: 104px;
+    height: 104px;
+    border-radius: 50%;
+    padding: 3px;
+    background: linear-gradient(135deg, #e63946, #f4a261);
+}
+
+.profile-avatar-img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #111;
+}
+
+.profile-avatar-change {
+    margin-top: 10px;
+    background: none;
+    border: 1px solid #333;
+    color: #000000;
+    font-size: 12px;
+    padding: 4px 12px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-family: 'DM Sans', sans-serif;
+    transition: all 0.2s;
+}
+
+.profile-avatar-change:hover {
+    border-color: #e63946;
+    color: #e63946;
+}
+
+/* Body */
+.profile-body {
+    padding: 20px 32px 32px;
+}
+
+.profile-error {
+    background: #2a0a0a;
+    border: 1px solid #e63946;
+    color: #e63946;
+    padding: 10px 14px;
+    border-radius: 8px;
+    font-size: 13px;
+    margin-bottom: 16px;
+}
+
+.profile-success {
+    background: #0a2a0a;
+    border: 1px solid #2ecc71;
+    color: #2ecc71;
+    padding: 10px 14px;
+    border-radius: 8px;
+    font-size: 13px;
+    margin-bottom: 16px;
+}
+
+/* Display mode */
+.profile-display {
+    text-align: center;
+}
+
+.profile-display-name {
+    font-family: 'DM Serif Display', serif;
+    font-size: 26px;
+    color: #000000;
+    margin: 0 0 4px;
+}
+
+.profile-display-handle {
+    color: #e63946;
+    font-size: 14px;
+    font-weight: 500;
+    margin: 0 0 8px;
+}
+
+.profile-display-email {
+    color: #000000;
+    font-size: 13px;
+    margin: 0 0 4px;
+}
+
+.profile-display-joined {
+    color: #444;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.profile-actions {
+    margin-top: 15px;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.profile-btn-customize {
+    padding: 10px 22px;
+    background: #e63946;
+    color: #fff;
+    border: none;
+    border-radius: 22px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    font-family: 'DM Sans', sans-serif;
+    transition: background 0.2s, transform 0.1s;
+}
+
+.profile-btn-customize:hover {
+    background: #c1121f;
+    transform: translateY(-1px);
+}
+
+.profile-btn-password {
+    padding: 10px 22px;
+    background: transparent;
+    color: #000000;
+    border: 1px solid #333;
+    border-radius: 22px;
+    font-size: 14px;
+    cursor: pointer;
+    font-family: 'DM Sans', sans-serif;
+    transition: all 0.2s;
+}
+
+.profile-btn-password:hover {
+    border-color: #555;
+    background-color: rgb(214, 214, 214);
+    color: #000000;
+}
+
+/* Edit mode */
+.profile-edit-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.profile-field {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.profile-field label {
+    font-size: 12px;
+    color: #666;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-weight: 500;
+}
+
+.profile-field input {
+    background: #1a1a1a;
+    border: 1px solid #2a2a2a;
+    border-radius: 10px;
+    padding: 10px 14px;
+    color: #fff;
+    font-size: 14px;
+    font-family: 'DM Sans', sans-serif;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.profile-field input:focus {
+    border-color: #e63946;
+}
+
+.profile-handle-input {
+    display: flex;
+    align-items: center;
+    background: #1a1a1a;
+    border: 1px solid #2a2a2a;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: border-color 0.2s;
+}
+
+.profile-handle-input:focus-within {
+    border-color: #e63946;
+}
+
+.profile-handle-input span {
+    padding: 10px 12px;
+    color: #e63946;
+    font-weight: 600;
+    font-size: 14px;
+    border-right: 1px solid #2a2a2a;
+}
+
+.profile-handle-input input {
+    border: none;
+    border-radius: 0;
+    flex: 1;
+    background: transparent;
+}
+
+.profile-handle-input input:focus {
+    border-color: transparent;
+}
+
+.profile-edit-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 4px;
+}
+
+.profile-btn-cancel {
+    flex: 1;
+    padding: 10px;
+    background: transparent;
+    border: 1px solid #333;
+    color: #aaa;
+    border-radius: 10px;
+    font-size: 14px;
+    cursor: pointer;
+    font-family: 'DM Sans', sans-serif;
+    transition: all 0.2s;
+}
+
+.profile-btn-cancel:hover {
+    border-color: #555;
+    color: #fff;
+}
+
+.profile-btn-save {
+    flex: 2;
+    padding: 10px;
+    background: #e63946;
+    border: none;
+    color: #fff;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: 'DM Sans', sans-serif;
+    transition: background 0.2s;
+}
+.profile-btn-save:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+.profile-btn-save:hover:not(:disabled) {
+    background: #c1121f;
+}
+
+.profile-btn-save:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}

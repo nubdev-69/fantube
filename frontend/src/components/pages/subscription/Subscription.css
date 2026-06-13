@@ -1,0 +1,317 @@
+.sub-page {
+    padding: 20px 24px;
+    max-width: 1200px;
+    margin: 0 auto;
+    font-family: 'Roboto', sans-serif;
+}
+
+.sub-title {
+    font-size: 20px;
+    font-weight: 600;
+    margin: 0 0 20px;
+    color: #0f0f0f;
+}
+
+/* Remove the old .sub-channel-avatar styles and replace with these */
+
+.sub-channel-avatar-wrap {
+    flex-shrink: 0;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    width: 68px;
+    transition: transform 0.15s;
+}
+.sub-channel-avatar-wrap:hover { transform: scale(1.05); }
+
+/* Ring lights up when this channel is the active filter */
+.sub-avatar-ring {
+    padding: 2px;
+    border-radius: 50%;
+    border: 2.5px solid transparent;
+    transition: border-color 0.2s;
+}
+.sub-channel-avatar-wrap.active .sub-avatar-ring {
+    border-color: #0f0f0f;
+}
+
+.sub-avatar-ring img {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Channel name below avatar */
+.sub-avatar-name {
+    font-size: 11px;
+    color: #606060;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+    line-height: 1.3;
+    transition: color 0.15s;
+}
+.sub-avatar-name.active {
+    color: #0f0f0f;
+    font-weight: 500;
+}
+
+/* Filter indicator bar */
+.sub-filter-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #f2f2f2;
+    border-radius: 8px;
+    padding: 8px 14px;
+    margin-bottom: 16px;
+    font-size: 13px;
+    color: #0f0f0f;
+}
+
+.sub-filter-clear {
+    background: none;
+    border: none;
+    font-size: 13px;
+    color: #065fd4;
+    cursor: pointer;
+    padding: 0;
+}
+.sub-filter-clear:hover { text-decoration: underline; }
+
+/* Channel avatars row */
+.sub-channels-row {
+    display: flex;
+    gap: 16px;
+    overflow-x: auto;
+    padding-bottom: 16px;
+    margin-bottom: 8px;
+    scrollbar-width: none;
+}
+.sub-channels-row::-webkit-scrollbar { display: none; }
+
+.sub-channel-avatar {
+    flex-shrink: 0;
+    cursor: pointer;
+    transition: transform 0.15s;
+}
+.sub-channel-avatar:hover { transform: scale(1.08); }
+
+.sub-channel-avatar img {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #e0e0e0;
+}
+
+/* Tabs */
+.sub-tabs {
+    display: flex;
+    gap: 4px;
+    border-bottom: 1px solid #e0e0e0;
+    margin-bottom: 24px;
+}
+
+.sub-tab {
+    padding: 10px 20px;
+    background: none;
+    border: none;
+    border-bottom: 2px solid transparent;
+    font-size: 14px;
+    font-weight: 500;
+    color: #606060;
+    cursor: pointer;
+    transition: color 0.15s, border-color 0.15s;
+    margin-bottom: -1px;
+}
+.sub-tab:hover { color: #0f0f0f; }
+.sub-tab.active { color: #0f0f0f; border-bottom-color: #0f0f0f; }
+
+/* Feed grid */
+.sub-feed-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.sub-video-card {
+    cursor: pointer;
+    border-radius: 10px;
+    overflow: hidden;
+    background: #fff;
+    transition: transform 0.15s;
+}
+.sub-video-card:hover { transform: translateY(-2px); }
+
+.sub-video-thumb {
+    position: relative;
+    aspect-ratio: 16/9;
+    overflow: hidden;
+    background: #000;
+}
+.sub-video-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.sub-video-duration {
+    position: absolute;
+    bottom: 6px;
+    right: 6px;
+    background: rgba(0,0,0,0.8);
+    color: #fff;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 2px 5px;
+    border-radius: 4px;
+}
+
+.sub-video-info {
+    display: flex;
+    gap: 10px;
+    padding: 10px;
+    align-items: flex-start;
+}
+
+.sub-video-pfp {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+    cursor: pointer;
+    transition: opacity 0.15s;
+}
+.sub-video-pfp:hover { opacity: 0.8; }
+
+.sub-video-text { flex: 1; min-width: 0; }
+
+.sub-video-title {
+    font-size: 14px;
+    font-weight: 600;
+    color: #0f0f0f;
+    margin: 0 0 3px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.sub-video-channel,
+.sub-video-meta {
+    font-size: 12px;
+    color: #606060;
+    margin: 0 0 2px;
+}
+
+/* Channels tab grid */
+.sub-channels-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 16px;
+}
+
+.sub-channel-card {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 16px;
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background 0.15s;
+    flex-wrap: wrap;
+}
+.sub-channel-card:hover { background: #f9f9f9; }
+
+.sub-channel-pfp {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.sub-channel-info { flex: 1; min-width: 0; }
+
+.sub-channel-name {
+    font-size: 15px;
+    font-weight: 600;
+    color: #0f0f0f;
+    margin: 0 0 2px;
+}
+
+.sub-channel-handle,
+.sub-channel-stats {
+    font-size: 12px;
+    color: #606060;
+    margin: 0 0 2px;
+}
+
+.sub-channel-latest {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-top: 10px;
+    border-top: 1px solid #f0f0f0;
+    margin-top: 4px;
+}
+
+.sub-channel-latest-thumb {
+    width: 80px;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+    border-radius: 5px;
+    flex-shrink: 0;
+    cursor: pointer;
+    transition: opacity 0.15s;
+}
+.sub-channel-latest-thumb:hover { opacity: 0.8; }
+
+.sub-channel-latest-title {
+    font-size: 12px;
+    font-weight: 500;
+    color: #0f0f0f;
+    margin: 0 0 3px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    flex: 1;
+}
+
+.sub-channel-latest-date {
+    font-size: 11px;
+    color: #909090;
+    margin: 0;
+    white-space: nowrap;
+}
+
+/* Empty / loading */
+.sub-empty {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40vh;
+    color: #606060;
+    font-size: 14px;
+}
+
+.sub-loading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40vh;
+    color: #606060;
+    font-size: 14px;
+}

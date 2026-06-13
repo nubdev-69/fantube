@@ -1,0 +1,128 @@
+.profile-sidebar-backdrop {
+    position: fixed;
+    top: 0; /* Cover entire screen */
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4); /* Lighter fade */
+    z-index: 1500; /* Above navbar and sidebar */
+}
+
+.profile-sidebar {
+    position: fixed;
+    top: 56px;
+    right: 16px;
+    width: 300px;
+    max-height: calc(100vh - 72px);
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+    overflow-y: auto;
+    z-index: 1501; /* Above backdrop */
+    padding: 16px 0;
+}
+
+.profile-sidebar-header {
+    padding: 0 16px 16px;
+}
+
+.profile-user-info {
+    display: flex;
+    gap: 16px;
+}
+
+.profile-sidebar-avatar {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.profile-user-details {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.profile-user-name {
+    font-size: 16px;
+    font-weight: 500;
+    margin: 0;
+    color: #0f0f0f;
+}
+
+.profile-user-email {
+    font-size: 14px;
+    color: #606060;
+    margin: 0;
+}
+
+.profile-manage-link {
+    font-size: 14px;
+    color: #065fd4;
+    text-decoration: none;
+    margin-top: 8px;
+}
+
+.profile-manage-link:hover {
+    text-decoration: underline;
+}
+
+.profile-sidebar-divider {
+    height: 1px;
+    background-color: #e5e5e5;
+    margin: 8px 0;
+}
+
+.profile-sidebar-menu {
+    display: flex;
+    flex-direction: column;
+}
+
+.profile-menu-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 10px 16px;
+    text-decoration: none;
+    color: #0f0f0f;
+    font-size: 14px;
+    transition: background-color 0.2s;
+    cursor: pointer;
+    border: none;
+    background: none;
+    width: 100%;
+    text-align: left;
+}
+
+.profile-menu-item:hover {
+    background-color: #f2f2f2;
+}
+
+.profile-menu-icon {
+    font-size: 20px;
+    width: 24px;
+    text-align: center;
+}
+
+.profile-signout-btn {
+    font-weight: 500;
+}
+
+.profile-sidebar::-webkit-scrollbar {
+    width: 8px;
+}
+
+.profile-sidebar::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.profile-sidebar::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 4px;
+}
+
+.profile-sidebar::-webkit-scrollbar-thumb:hover {
+    background: #aaa;
+}

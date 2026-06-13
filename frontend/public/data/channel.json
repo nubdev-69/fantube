@@ -1,0 +1,21 @@
+[{  
+    "id":"u1",
+    "channelId":"universal-pictures",
+    "name":"Universal Pictures",
+    "avatar":"/avatar/universal-avatar.jpg",
+    "banner":"/banners/u3.png",
+    "description":"Channel Description bla bla bla",
+    "subs":2000,
+    "video":3,
+    "createdAt":"2026-07-17T00:00:00Z"
+},
+{   "id":"u2",
+    "channelId":"warnerbros",
+    "name":"Warner Bros. Pictures",
+    "avatar":"/avatar/warner-avatar.jpg",
+    "banner":"/banners/default.png",
+    "description":"Channel Description bla bla bla",
+    "subs":5000,
+    "video":["2","3"],
+    "createdAt":"2026-07-17T00:00:00Z"
+}]

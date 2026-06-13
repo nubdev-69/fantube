@@ -1,0 +1,183 @@
+[
+    {
+      "id": "1",
+      "videoId": "1",
+      "user": {
+        "id": "u1",
+        "name": "Aman Verma",
+        "avatar": "/user/avatar/u1.png"
+      },
+      "text": "Great explanation, really helped!",
+      "publishedAt": "2026-07-17T10:15:00Z",
+      "likes": 260
+    },
+    {
+      "id": "2",
+      "videoId": "1",
+      "user": {
+        "id": "u2",
+        "name": "Neha Singh",
+        "avatar": "/user/avatar/u2.png"
+      },
+      "text": "This cleared all my doubts.",
+      "publishedAt": "2026-07-18T08:40:00Z",
+      "likes": 132
+    },
+    {
+      "id": "3",
+      "videoId": "1",
+      "user": {
+        "id": "u3",
+        "name": "Rahul Mehta",
+        "avatar": "/user/avatar/u3.png"
+      },
+      "text": "Simple and easy to understand 👍",
+      "publishedAt": "2026-07-18T12:05:00Z",
+      "likes": 98
+    },
+    {
+      "id": "4",
+      "videoId": "2",
+      "user": {
+        "id": "u4",
+        "name": "Sneha Patel",
+        "avatar": "/user/avatar/u4.png"
+      },
+      "text": "Loved the way you explained this topic.",
+      "publishedAt": "2026-07-19T09:20:00Z",
+      "likes": 201
+    },
+    {
+      "id": "5",
+      "videoId": "2",
+      "user": {
+        "id": "u5",
+        "name": "Karan Joshi",
+        "avatar": "/user/avatar/u5.png"
+      },
+      "text": "Can you make a video on advanced concepts?",
+      "publishedAt": "2026-07-19T14:10:00Z",
+      "likes": 87
+    },
+    {
+      "id": "6",
+      "videoId": "2",
+      "user": {
+        "id": "u6",
+        "name": "Pooja Sharma",
+        "avatar": "/user/avatar/u6.png"
+      },
+      "text": "Finally understood this after watching your video.",
+      "publishedAt": "2026-07-20T07:55:00Z",
+      "likes": 145
+    },
+    {
+      "id": "7",
+      "videoId": "2",
+      "user": {
+        "id": "u7",
+        "name": "Arjun Rao",
+        "avatar": "/user/avatar/u7.png"
+      },
+      "text": "Very informative, keep it up!",
+      "publishedAt": "2026-07-20T16:30:00Z",
+      "likes": 64
+    },
+    {
+      "id": "8",
+      "videoId": "3",
+      "user": {
+        "id": "u8",
+        "name": "Mehul Jain",
+        "avatar": "/user/avatar/u8.png"
+      },
+      "text": "This is exactly what I was searching for.",
+      "publishedAt": "2026-07-21T11:45:00Z",
+      "likes": 178
+    },
+    {
+      "id": "9",
+      "videoId": "3",
+      "user": {
+        "id": "u9",
+        "name": "Ananya Gupta",
+        "avatar": "/user/avatar/u9.png"
+      },
+      "text": "Thanks for explaining with examples.",
+      "publishedAt": "2026-07-21T18:10:00Z",
+      "likes": 93
+    },
+    {
+      "id": "10",
+      "videoId": "3",
+      "user": {
+        "id": "u10",
+        "name": "Rohit Kumar",
+        "avatar": "/user/avatar/u10.png"
+      },
+      "text": "Short and crisp explanation.",
+      "publishedAt": "2026-07-22T06:25:00Z",
+      "likes": 56
+    },
+    {
+      "id": "11",
+      "videoId": "1",
+      "user": {
+        "id": "u11",
+        "name": "Divya Nair",
+        "avatar": "/user/avatar/u11.png"
+      },
+      "text": "Please upload more videos like this.",
+      "publishedAt": "2026-07-22T13:50:00Z",
+      "likes": 74
+    },
+    {
+      "id": "12",
+      "videoId": "2",
+      "user": {
+        "id": "u12",
+        "name": "Sahil Khan",
+        "avatar": "/user/avatar/u12.png"
+      },
+      "text": "This helped me a lot during my exam prep.",
+      "publishedAt": "2026-07-23T09:00:00Z",
+      "likes": 119
+    },
+    {
+      "id": "13",
+      "videoId": "3",
+      "user": {
+        "id": "u13",
+        "name": "Ishita Roy",
+        "avatar": "/user/avatar/u13.png"
+      },
+      "text": "Well explained, waiting for the next part!",
+      "publishedAt": "2026-07-23T15:40:00Z",
+      "likes": 88
+    },
+    {
+      "id": "14",
+      "videoId": "1",
+      "user": {
+        "id": "u14",
+        "name": "Nikhil Agarwal",
+        "avatar": "/user/avatar/u14.png"
+      },
+      "text": "Clear audio and great visuals.",
+      "publishedAt": "2026-07-24T08:35:00Z",
+      "likes": 51
+    },
+    {
+      "id": "15",
+      "videoId": "3",
+      "user": {
+        "id": "u15",
+        "name": "Priya Malhotra",
+        "avatar": "/user/avatar/u15.png"
+      },
+      "text": "One of the best explanations on this topic.",
+      "publishedAt": "2026-07-24T19:10:00Z",
+      "likes": 167
+    }
+  ]
+  

@@ -1,0 +1,65 @@
+[
+  {
+    "videoId": "1",
+    "title": "The Odyssey | Official Trailer",
+    "description": "Christopher Nolan brings Homer’s legendary journey to the big screen in this epic adaptation, shot with groundbreaking IMAX technology. ",
+    "url": "https://www.youtube.com/watch?v=Mzw2ttJD2qQ",
+    "thumbnail": {
+      "url": "/thumbnail/odyssey.jpg",
+      "width": 1280,
+      "height": 720
+    },
+    "channel": {
+      "id": "u1",
+      "name": "Universal Pictures",
+      "avatar": "/avatar/universal-avatar.jpg",
+      "url": "https://www.youtube.com/@UniversalPictures"
+    },
+    "duration": "PT2M15S",
+    "views": 39789931,
+    "likes": 1254300,
+    "publishedAt": "2026-07-17T00:00:00Z"
+  },
+  {
+    "videoId": "2",
+    "title": "Dune: Part Two | Official Trailer",
+    "description": "Paul Atreides embraces his destiny as he joins the Fremen and prepares to face the forces that destroyed his family.",
+    "url": "https://www.youtube.com/watch?v=Way9Dexny3w",
+    "thumbnail": {
+      "url": "/thumbnail/dune-part2.jpg",
+      "width": 1280,
+      "height": 720
+    },
+    "channel": {
+      "id": "u2",
+      "name": "Warner Bros. Pictures",
+      "avatar": "/avatar/warner-avatar.jpg",
+      "url": "https://www.youtube.com/@WarnerBros"
+    },
+    "duration": "PT3M07S",
+    "views": 91234567,
+    "likes": 3421800,
+    "publishedAt": "2024-01-03T00:00:00Z"
+  },
+  {
+    "videoId": "3",
+    "title": "56 Days - Official Trailer | Prime Video",
+    "description": "A chance romance turns deadly when secrets surface during lockdown, blurring the line between love and murder.",
+    "url": "https://www.youtube.com/watch?v=P5EhHeF99wg",
+    "thumbnail": {
+      "url": "/thumbnail/56days.jpg",
+      "width": 1280,
+      "height": 720
+    },
+    "channel": {
+      "id": "u3",
+      "name": "Prime Video",
+      "avatar": "/avatar/prime-video-avatar.jpg",
+      "url": "https://www.youtube.com/@PrimeVideo"
+    },
+    "duration": "PT1M54S",
+    "views": 9124567,
+    "likes": 287400,
+    "publishedAt": "2026-01-21T00:00:00Z"
+  }
+]
