@@ -1,6 +1,6 @@
 # Fantube
 
-A full-stack YouTube clone built as a college project. Supports video upload, playback, channel management, comments, subscriptions, OAuth login, and a personalised recommendation feed.
+A full-stack YouTube clone. Supports video upload, playback, channel management, comments, subscriptions, OAuth login, and a personalised recommendation feed.
 
 ---
 
